@@ -1,0 +1,1 @@
+{"tarefasNovas":["aprender trilha do google cloud","aprender fullstack","aprendendo a viver"]}
