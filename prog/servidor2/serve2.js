@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors")
-const animais = require("./animais")
+
 const usuario = require("./usuario"); // arquivos usados no node
 const tarefas  = require("./tarefas");
 const alunos = require("./alunos")
@@ -13,7 +13,6 @@ app.use(express.json()); // para ler JSON
 // a rota precisa bater com o curl
 app.use(cors({
   methods: ['GET','POST','PUT','DELETE']}))     // para qualquer rota poder usar
-app.use("/animais",animais);
 app.use("/produtos",produto)
 app.use("/alunos",alunos);
 app.use("/tarefas",tarefas);

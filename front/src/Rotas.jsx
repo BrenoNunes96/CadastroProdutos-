@@ -6,7 +6,7 @@
   import RotasProtegida from "./RotasProtegias";
   import Dash from "./Dash"
   import Perfil from "./Perfil";
-  import Animais from "./animais";
+  import Animais from "./Animais"
    import Produto from "./Produto";
 import Tarefa from "./Tarefas";
   
