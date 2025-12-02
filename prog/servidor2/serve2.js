@@ -15,7 +15,7 @@ app.use(cors({
   methods: ['GET','POST','PUT','DELETE']}))     // para qualquer rota poder usar
 app.use("/produtos",produto)
 app.use("/alunos",alunos);
-app.use("/tarefas",tarefas);
+app.use("/tarefas",tarefas);   // nome do arquivo que tem as rotas
 app.use("/usuarios", require("./usuariotarefas"));
 app.use("/usuario",usuario)           //APP.USE /alunos é o nome que o front no fetch ira usar 
 
