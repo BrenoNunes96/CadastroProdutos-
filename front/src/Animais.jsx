@@ -31,6 +31,31 @@ headers:{
 
 
 
+const  animal = async ()=>{
+try{
+
+    const res = await fetch("http://localhost:3000/animais/82",{
+        method:"GET",
+        headers:{"Content-Type":"application/json"
+
+
+        }
+
+
+    })
+
+const data = await res.json()
+console.log(data)
+
+}
+catch(error){
+    console.error(error)
+}
+
+
+} 
+
+
 return (
 <div>
 
