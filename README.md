@@ -80,7 +80,7 @@ MySQL / MariaDB
 
 📦 Como Rodar o Projeto
 🟦 1. Clone o repositório
-git clone https://github.com/SEU-USUARIO/SEU-REPO.git
+git clone https://github.com/BrenoNunes96/CadastroProdutos-
 cd SEU-REPO
 
 🟧 2. Configurar o Back-end
