@@ -94,44 +94,17 @@ body:JSON.stringify(enviar)               // enviando pelo body pra o back
 
 })
 const data = await res.json()  // TOKENREAL
+console.log(data)
 
-
-if(data){                                   // /resposta do servidor, no caso de login ele gera um token se tiver correto email e senha
-
-const res2 = await fetch("http://localhost:3000/alunos/protegido",{ // fazemos uma requisiçao para protegido, que tem uma funçao que vai validar o token
-
-method:'GET',
-headers:{
-  "Authorization":data     //enviamos o token  que é a resposta do servidor na rota login, q esta em data, para req.headears
-},                           
-
-
-})
-const data2= await res2.json() // objeto vindo de protegido que é o que continua no codigo se for true 
-
-
-if(data2 !=='token nao validado'){
-   localStorage.setItem('tokenReal',data) //guarda no localstorage o token real, se der match vai cair aqui entao guardamos la pq sabenmos que é certeza o token
-   let tokenreal = localStorage.getItem('tokenReal')
-   console.log(tokenreal)
- setTokezin(data2)   
   navigate("/tarefas")
-}    // resposta do servidor na rota protegido
-else{
-  console.log("token nao foi validado")
-   navigate("/registrar")
-}  
-  
-
-console.log(data2)
+} catch(error){
+console.log(error)
 
 }
 
 
-}catch(error){
-  console.log(error)
-    
-}
+
+
 
 }
 

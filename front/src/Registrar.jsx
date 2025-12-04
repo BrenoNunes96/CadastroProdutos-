@@ -6,7 +6,6 @@ const [nome,setNome]=useState("")
 const [email,setEmail]=useState("")
 const [senha,setSenha]= useState("")
 
-const enviar2 ={nome,email,senha}
 const navigate = useNavigate()
 
 useEffect(()=>{
@@ -16,9 +15,10 @@ console.log("TOKEN REMOVIDO")
 
 const enviou = async ()=>{
 
+const enviar2 ={nome,email,senha}
 
     try{
-const res = await fetch("http://localhost:3000/alunos/banco",{
+const res = await fetch("http://localhost:3000/alunos/login",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
